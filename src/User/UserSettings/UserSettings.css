@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&family=Karla&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Karla;
+  font-style: normal;
+  background-color: white;
+}
+
+.view-profile-grid-container {
+  display: grid;
+  grid-template-columns: 4% 60% 20%;
+  column-gap: 10px;
+  max-width: 1920px;
+  margin: auto;
+}
+
+.btn-1 button {
+  background: #ffffff;
+  border: 2px solid #e6e6e6;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: -0.02em;
+  color: #1c0025;
+  height: 20px;
+  width: 90px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.four-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.four-buttons button {
+  background: #ffffff;
+  border: 2px solid #e6e6e6;
+  font-weight: bold;
+  font-size: 13px;
+  width: 160px;
+  height: 41px;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+.four-buttons button:hover {
+  background: green;
+  border: 2px solid green;
+  color: #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.four-buttons .active {
+  background: green;
+  border: 2px solid green;
+  color: #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.two-column-section {
+  background: #ffffff;
+  border: 2px solid #f3f3f3;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.two-column-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 15px;
+  max-width: 1920px;
+  margin: auto;
+  padding: 5%;
+}
+
+#img {
+  width: 220px;
+  height: 220px;
+  border-radius: 110px;
+}
+
+#input[type="file"] {
+  display: none;
+}
+
+.label {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  line-height: 21px;
+}
+
+.image-upload {
+  margin: auto;
+  width: 200px;
+  height: 50px;
+  color: green;
+  border: 2px solid green;
+  border-radius: 10px;
+  background: #ffffff;
+  text-align: center;
+  cursor: pointer;
+}
+
+#icons {
+  height: 80px;
+}
+
+.placeholder-contents input,
+textarea {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.02em;
+  color: #000000;
+  background: #f3f3f3;
+  border: 2px solid #c4c4c4;
+  border-radius: 5px;
+  width: 95%;
+  resize: none;
+}
+
+.placeholder-contents textarea {
+  width: 60%;
+  padding: 15px;
+}
+
+.placeholder-contents {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin: auto;
+  font-family: FontAwesome;
+}
+
+.btn-save {
+  display: flex;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.btn-save button {
+  background: green;
+  border: 5px solid green;
+  border-radius: 5px;
+  height: 32px;
+  width: 160px;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
+  align-items: flex-start;
+}
+
+.placeicon {
+  font-family: fontawesome;
+}
+
+/* ------------------Media Queries--------- */
+
+@media screen and (max-width: 1024px) {
+  .two-column-grid {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+
+  h4 {
+    text-align: center;
+  }
+
+  .placeholder-contents {
+    display: flex;
+    align-items: center;
+  }
+
+  .second-column {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .four-buttons {
+    display: grid;
+    grid-template-columns: auto auto;
+    max-width: 1920px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .view-profile-grid-container {
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    column-gap: 10px;
+    max-width: 1920px;
+    margin: auto;
+  }
+  .four-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .circle {
+    width: 120px;
+    height: 120px;
+  }
+}
