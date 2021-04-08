@@ -68,7 +68,6 @@ const ProfileSettings = () => {
     };
   };
   const onFinish = async (values) => {
-    console.log("phone:", phone_number);
     console.log("Success:", values);
 
     setdisabled(true);
@@ -82,8 +81,8 @@ const ProfileSettings = () => {
     if (img !== undefined) {
       profileData.append("photo", img);
     }
-    if (phone_number !== undefined) {
-      profileData.append("phone", phone_number);
+    if (phone !== undefined) {
+      profileData.append("phone_number", phone);
     }
 
     const edit_response = await PatchApi(profile_url, profileData);
@@ -99,7 +98,7 @@ const ProfileSettings = () => {
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
-  const [phone_number, setphone_number] = useState();
+  const [phone, setPhone] = useState();
   return (
     <>
       <Row>
@@ -183,7 +182,7 @@ const ProfileSettings = () => {
                                 international
                                 placeholder="Enter phone number"
                                 value={profileInfo.phone_number}
-                                onChange={setphone_number}
+                                onChange={setPhone}
                               />
                             </Form.Item>
 

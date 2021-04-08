@@ -1,26 +1,17 @@
-import {
-  Button,
-  Form,
-  message,
-  Radio,
-  Select,
-  Modal,
-  notification,
-} from "antd";
+import { Button, Form, message, Modal, Radio, Select, Tag } from "antd";
+import moment from "moment";
 import React, { useEffect, useState } from "react";
+import "react-clock/dist/Clock.css";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import "react-phone-number-input/style.css";
+import "react-time-picker/dist/TimePicker.css";
 import { AuthPostApi, GetApi } from "../../Api/Callapi";
 import {
   BookFutsalLink,
-  UserProfileLink,
   FutsalRateLink,
+  UserProfileLink,
 } from "../../Api/Endpoint";
-import TimePicker from "react-time-picker";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-import "react-time-picker/dist/TimePicker.css";
-import "react-clock/dist/Clock.css";
-import moment from "moment";
 
 const { Option } = Select;
 
@@ -247,13 +238,28 @@ const BookNow = (futsalId) => {
           onCancel={handlePriceCancel}
         >
           {futsalRate.member_type ? (
-            <p>Member Type : {futsalRate && futsalRate.member_type}</p>
+            <p>
+              Member Type :{" "}
+              {futsalRate && futsalRate.member_type === "Gold" ? (
+                <Tag color="gold">Gold</Tag>
+              ) : null}
+              {futsalRate && futsalRate.member_type === "Platinum" ? (
+                <Tag color="geekblue">Platinum</Tag>
+              ) : null}
+              {futsalRate && futsalRate.member_type === "Diamond" ? (
+                <Tag color="purple">Diamond</Tag>
+              ) : null}
+            </p>
           ) : (
-            <p>Member Type :No Membership</p>
+            <p>
+              Member Type : <Tag color="#f50">No Membership</Tag>
+            </p>
           )}
-          <p>Price : {futsalRate && futsalRate.price}</p>
-          <p>Discount : {futsalRate && futsalRate.discount}</p>
-          <p>Total : {futsalRate && futsalRate.Total}</p>
+          <p>Price : Rs {futsalRate && futsalRate.price}</p>
+          <p>Discount : {futsalRate && futsalRate.discount} %</p>
+          <p>
+            Total : Rs <strong>{futsalRate && futsalRate.Total}</strong>
+          </p>
         </Modal>
         <h6>
           <strong>Note :</strong>
