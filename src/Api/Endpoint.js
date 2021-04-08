@@ -1,14 +1,10 @@
 export var url = "http://127.0.0.1:8000/";
-if (window.location.hostname === "localhost") {
-  url = "http://127.0.0.1:8000/";
-}
 
 //USER-LOGIN API::
 export const UserLoginLink = `${url}account/login/`;
 export const UserRegisterLink = `${url}account/register/`;
 export const UserChangePasswordLink = `${url}account/change_password/`;
 export const UserForgetPasswordLink = `${url}account/forgot_password/`;
-export const ForgotPasswordCheckPin = `${url}account/forgot_password/check/`;
 export const ChangeForgetPasswordLink = `${url}account/forgot_password/change/`;
 export const VerifyLink = `${url}account/verify_email/`;
 export const AllUserAccounts = `${url}account/all_users/`;
@@ -62,3 +58,15 @@ export const BookStatusLink = `${url}futsal/booking/`;
 
 // Admin Booking
 export const AdminBookingLink = `${url}futsal/all_booking/`;
+
+// Futsal Type
+export const FiveASideFutsalLink = `${url}futsal/5A/`;
+export const SevenASideFutsalLink = `${url}futsal/7A/`;
+export const BothSideFutsalLink = `${url}futsal/5A/7A/`;
+
+// Search Futsal Name
+export const SearchFutsalNameLink = `${url}futsal/search_futsal/`;
+export const SearchFutsalLocationLink = `${url}futsal/search_futsal/location/`;
+
+// Edit Membership
+export const EditMembershipLink = `${url}futsal/edit_member/`;

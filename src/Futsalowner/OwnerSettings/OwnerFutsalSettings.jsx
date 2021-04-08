@@ -68,6 +68,7 @@ const OwnerFutsalSettings = () => {
     fileReader.onload = function () {
       var result = fileReader.result;
       console.log(result);
+      setImg(fileObject);
       setfutsalInfo({ ...futsalInfo, photo: fileObject });
       setFutsalInitfutsalInfo({ ...initFutsalInfo, photo: result });
       console.log(initFutsalInfo);
@@ -86,7 +87,7 @@ const OwnerFutsalSettings = () => {
     }
     console.log(img);
     if (img !== undefined) {
-      futsalData.append("photo", img);
+      futsalData.append("fut_image", img);
     }
     if (phone_number !== undefined) {
       futsalData.append("phone", phone_number);

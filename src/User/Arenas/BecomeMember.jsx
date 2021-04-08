@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
-import { Form, Input, Select, Row, Col, Button, Radio, message } from "antd";
+import { Button, Form, message, Radio, Select } from "antd";
+import React, { useEffect, useState } from "react";
 import "react-phone-number-input/style.css";
-import PhoneInput from "react-phone-number-input";
-import { GetApi, AuthPostApi } from "../../Api/Callapi";
-import { UserProfileLink, BecomeMemberLink } from "../../Api/Endpoint";
+import { AuthPostApi, GetApi } from "../../Api/Callapi";
+import { BecomeMemberLink, UserProfileLink } from "../../Api/Endpoint";
 
 const { Option } = Select;
 

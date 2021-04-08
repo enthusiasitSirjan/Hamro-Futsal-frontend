@@ -19,7 +19,6 @@ import FutsalRegistrationForm from "./Futsalowner/OwnerDashboard/FutsalRegistrat
 import PasswordVerify from "./User/Verify/PasswordVerify";
 import EmailVerify from "./User/Verify/EmailVerify";
 import CheckPin from "./User/Verify/CheckPin";
-import NewPassword from "./User/Verify/NewPassword";
 import AddTrainingForm from "./Admin/Trainings/AddTrainingForm";
 import UserSettings from "./User/UserSettings/UserSettings";
 import OwnerSettings from "./Futsalowner/OwnerSettings/OwnerSettings";
@@ -42,7 +41,6 @@ const App = () => {
           {/* Forgot password Check Pin */}
           <Route exact path="/verify_pin" component={CheckPin} />
           {/* New Password */}
-          <Route exact path="/new_password" component={NewPassword} />
           {/* Futsal Arenas */}
           <Route exact path="/arenas" component={Arena} />
           {/* Settings */}

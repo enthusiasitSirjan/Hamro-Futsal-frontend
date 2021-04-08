@@ -44,7 +44,7 @@ const AdminUsers = () => {
               className="admin-registered-users"
               style={{
                 display: "grid",
-                gridTemplateColumns: "25% 25% 25% 25%",
+                gridTemplateColumns: "auto auto auto auto",
                 gap: "40px",
                 margin: "auto",
                 marginTop: "30px",
@@ -90,7 +90,7 @@ const AdminUsers = () => {
                                   href="##"
                                   style={{
                                     fontWeight: "bold",
-                                    color: "#ad77c0",
+                                    color: "green",
                                   }}
                                 >
                                   {data && data.phone_number}

@@ -42,17 +42,17 @@ const AdminDashboard = () => {
           <>
             {status === "Pending" ? (
               <>
-                <Tag color="orange">Pending</Tag>
+                <Tag color="#2db7f5">Pending</Tag>
               </>
             ) : null}
             {status === "Approved" ? (
               <>
-                <Tag color="green">Approved</Tag>
+                <Tag color="#87d068">Approved</Tag>
               </>
             ) : null}
             {status === "Cancelled" ? (
               <>
-                <Tag color="red">Cancelled</Tag>
+                <Tag color="#f50">Cancelled</Tag>
               </>
             ) : null}
           </>

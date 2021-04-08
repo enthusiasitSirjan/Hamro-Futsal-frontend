@@ -61,30 +61,13 @@ const PaymentPendingMembers = () => {
                         <span className="card-title">{data && data.name}</span>
                       </>
                     }
-                    description={
-                      <>
-                        <span>
-                          {data.pay_status === "Approved" ? (
-                            <Tag color="green">{data.pay_status}</Tag>
-                          ) : null}
-
-                          {data.pay_status === "Cancelled" ? (
-                            <Tag color="red">{data.pay_status}</Tag>
-                          ) : null}
-
-                          {data.pay_status === "Pending" ? (
-                            <Tag color="orange">{data.pay_status}</Tag>
-                          ) : null}
-                        </span>
-                      </>
-                    }
                   />
                   <Meta
                     style={{ fontFamily: "Karla", marginTop: "10px" }}
                     description={
                       <>
                         <p style={{ marginBottom: "4%" }}>
-                          Submitted On :{" "}
+                          Registered On :{" "}
                           <strong>
                             {moment(data && data.created_at).format(
                               "YYYY-MM-DD"
@@ -92,13 +75,16 @@ const PaymentPendingMembers = () => {
                           </strong>
                         </p>
                         <p style={{ marginBottom: "4%" }}>
-                          Status :{" "}
-                          <a
-                            href="##"
-                            style={{ fontWeight: "bold", color: "#ad77c0" }}
-                          >
-                            {data && data.pay_status}
-                          </a>
+                          Membership Status : &nbsp;
+                          {data.pay_status === "Pending" ? (
+                            <Tag color="#2db7f5">{data.pay_status}</Tag>
+                          ) : null}
+                          {data.pay_status === "Approved" ? (
+                            <Tag color="#87d068">{data.pay_status}</Tag>
+                          ) : null}
+                          {data.pay_status === "Cancelled" ? (
+                            <Tag color="#f50">{data.pay_status}</Tag>
+                          ) : null}
                         </p>
                         <p style={{ marginBottom: "4%" }}>
                           Phone No :{data && data.phone_number}
@@ -107,7 +93,16 @@ const PaymentPendingMembers = () => {
                           Email :{data && data.email}
                         </p>
                         <p style={{ marginBottom: "4%" }}>
-                          Membership Type : {data && data.member_type}
+                          Membership Type : &nbsp;
+                          {data.member_type === "Gold" ? (
+                            <Tag color="gold">{data.member_type}</Tag>
+                          ) : null}
+                          {data.member_type === "Platinum" ? (
+                            <Tag color="geekblue">{data.member_type}</Tag>
+                          ) : null}
+                          {data.member_type === "Diamond" ? (
+                            <Tag color="purple">{data.member_type}</Tag>
+                          ) : null}
                         </p>
                       </>
                     }
