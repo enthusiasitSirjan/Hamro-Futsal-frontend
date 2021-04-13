@@ -30,7 +30,7 @@ const AllFutsal = () => {
           <Col>
             <AdminSidebar />
           </Col>
-          <Col>
+          <Col style={{ width: "80%" }}>
             <div
               className="admin-registered-users"
               style={{
@@ -87,7 +87,7 @@ const AllFutsal = () => {
                                 Phone Number :{data && data.fut_phone}
                               </p>
                               <p style={{ marginBottom: "4%" }}>
-                                Location : {data && data.address}
+                                Location : {data && data.location}
                               </p>
                               <p style={{ marginBottom: "4%" }}>
                                 Futsal Type : {data && data.fut_type}

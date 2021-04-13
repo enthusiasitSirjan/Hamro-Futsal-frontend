@@ -53,7 +53,7 @@ const AddTournamentForm = () => {
           <Col>
             <AdminSidebar />
           </Col>
-          <Col>
+          <Col style={{ width: "50%" }}>
             <div className="admin-training-form">
               <Card hoverable style={{ margin: "50px auto" }} width={400}>
                 <div>
@@ -65,13 +65,22 @@ const AddTournamentForm = () => {
                       flexDirection: "column",
                       alignItems: "center",
                     }}
-                  ></div>
+                  >
+                    <div>
+                      <input
+                        type="file"
+                        name="tourno_photo"
+                        onChange={handleChangeImage}
+                        style={{ marginTop: "10px" }}
+                      />
+                    </div>
+                  </div>
                   <br />
 
                   <br />
 
                   <div>
-                    <Form onFinish={onFinish} scrollToFirstError>
+                    <Form onFinish={onFinish}>
                       <Form.Item
                         name="tourno_name"
                         label="Tournament Name"
@@ -85,10 +94,10 @@ const AddTournamentForm = () => {
                         <Input />
                       </Form.Item>
 
-                      <Form.Item label="Tournament Date">
+                      <Form.Item>
                         <Form.Item
                           name="tourno_date"
-                          noStyle
+                          label="Tournament Date"
                           rules={[
                             {
                               required: true,

@@ -114,32 +114,33 @@ const AdminDashboard = () => {
                 <h1>Quick Stats</h1>
                 <div className="admin-info-item">
                   <div>
-                    <Card
-                      hoverable
-                      title="Number of users"
-                      style={{ width: 300 }}
-                    >
-                      <h1 style={{ textAlign: "center" }}>
-                        {totalUser && totalUser.TotalUser}
-                      </h1>
+                    <Card hoverable style={{ width: 300 }}>
+                      <div className="admin-dashboard-users">
+                        <h5>Number of users</h5>
+                        <h1 style={{ textAlign: "center" }}>
+                          {totalUser && totalUser.TotalUser}
+                        </h1>
+                      </div>
                     </Card>
                   </div>
                   <div>
-                    <Card
-                      hoverable
-                      title="Number of Futsal Owner"
-                      style={{ width: 300 }}
-                    >
-                      <h1 style={{ textAlign: "center" }}>
-                        {totalUser && totalUser.TotalFutsalOwner}
-                      </h1>
+                    <Card hoverable style={{ width: 300 }}>
+                      <div className="admin-dashboard-users">
+                        <h5>Number of Futsal Owner</h5>
+                        <h1 style={{ textAlign: "center" }}>
+                          {totalUser && totalUser.TotalFutsalOwner}
+                        </h1>
+                      </div>
                     </Card>
                   </div>
                   <div>
-                    <Card hoverable title="Total Futsal" style={{ width: 300 }}>
-                      <h1 style={{ textAlign: "center" }}>
-                        {totalUser && totalUser.TotalFutsal}
-                      </h1>
+                    <Card hoverable style={{ width: 300 }}>
+                      <div className="admin-dashboard-users">
+                        <h5>Total Futsal</h5>
+                        <h1 style={{ textAlign: "center" }}>
+                          {totalUser && totalUser.TotalFutsal}
+                        </h1>
+                      </div>
                     </Card>
                   </div>
                 </div>
@@ -152,47 +153,63 @@ const AdminDashboard = () => {
                   <div>
                     <Card
                       hoverable
-                      title="Pending Bookings"
-                      style={{ width: 300 }}
+                      style={{ width: 300, backgroundColor: "cyan" }}
                     >
-                      <h1 style={{ textAlign: "center" }}>
-                        {totalStat && totalStat.TotalBookings}
-                      </h1>
+                      <div className="admin-dashboard-users">
+                        <h5>Pending Bookings</h5>
+                        <h1 style={{ textAlign: "center" }}>
+                          {totalStat && totalStat.TotalBookings}
+                        </h1>
+                      </div>
                     </Card>
                   </div>
                   <div>
                     <Card
                       hoverable
-                      title="Approved Bookings"
-                      style={{ width: 300 }}
+                      style={{
+                        width: 300,
+                        backgroundColor: "rgb(174, 23, 52)",
+                      }}
                     >
-                      <h1 style={{ textAlign: "center" }}>
-                        {totalStat && totalStat.TotalValidBookings}
-                      </h1>
+                      <div className="admin-dashboard-users">
+                        <h5 style={{ color: "white" }}>Approved Bookings</h5>
+                        <h1 style={{ textAlign: "center", color: "white" }}>
+                          {totalStat && totalStat.TotalValidBookings}
+                        </h1>
+                      </div>
                     </Card>
                   </div>
                   <div>
                     <Card
                       hoverable
-                      title="Cancelled Bookings"
-                      style={{ width: 300 }}
+                      style={{
+                        width: 300,
+                        backgroundColor: "rgb(12, 181, 57)",
+                      }}
                     >
-                      <h1 style={{ textAlign: "center" }}>
-                        {totalStat && totalStat.TotalCancelledBookings}
-                      </h1>
+                      <div className="admin-dashboard-users">
+                        <h5 style={{ color: "white" }}>Cancelled Bookings</h5>
+                        <h1 style={{ textAlign: "center", color: "white" }}>
+                          {totalStat && totalStat.TotalCancelledBookings}
+                        </h1>
+                      </div>
                     </Card>
                   </div>
                 </div>
               </div>
             </Row>
             <Row>
-              <Table
-                columns={columns}
-                dataSource={loadData}
-                pagination={false}
-                // tableLayout="fixed"
-                size="middle"
-              />
+              <div className="booking-status-admin">
+                {" "}
+                <h1>Booking Status</h1>
+                <Table
+                  columns={columns}
+                  dataSource={loadData}
+                  pagination={false}
+                  // tableLayout="fixed"
+                  size="middle"
+                />
+              </div>
             </Row>
           </Col>
         </Row>

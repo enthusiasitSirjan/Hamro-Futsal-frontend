@@ -35,7 +35,7 @@ const PaymentPendingMembers = () => {
         className="owner-pending-members"
         style={{
           display: "grid",
-          gridTemplateColumns: "25% 25% 25% 25%",
+          gridTemplateColumns: "auto auto auto auto",
           gap: "40px",
           margin: "auto",
           marginTop: "30px",

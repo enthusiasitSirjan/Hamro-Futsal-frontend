@@ -7,6 +7,7 @@ import Gallery from "./Gallery";
 import Imagesection from "./Imagesection";
 import Navbar from "./Navbar/Navbar";
 import Services from "./Services";
+import UserStat from "./UserStat";
 
 const Landingpage = () => {
   return (
@@ -21,6 +22,7 @@ const Landingpage = () => {
           <Futsalnepal />
           <Aboutus />
           <Gallery />
+          <UserStat />
           <Contactus />
         </div>
       </main>

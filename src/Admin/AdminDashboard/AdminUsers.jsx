@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Modal, Row, Col, message, Card } from "antd";
+import { Modal, Row, Col, message, Card, Avatar } from "antd";
 import AdminSidebar from "../Sidebar/AdminSidebar";
 import { AllUserAccounts } from "../../Api/Endpoint";
 import { GetApi } from "../../Api/Callapi";
 import moment from "moment";
 import DeleteUser from "./DeleteUser";
+import { UserOutlined } from "@ant-design/icons";
 
 const { Meta } = Card;
 
@@ -39,7 +40,7 @@ const AdminUsers = () => {
           <Col>
             <AdminSidebar />
           </Col>
-          <Col>
+          <Col style={{ width: "80%" }}>
             <div
               className="admin-registered-users"
               style={{
@@ -63,7 +64,13 @@ const AdminUsers = () => {
                     >
                       <div className="title-description">
                         <Meta
-                          // avatar={ <Avatar src="random.png" />}
+                          avatar={
+                            data && data.fut_image ? (
+                              <UserOutlined />
+                            ) : (
+                              <Avatar src={data && data.photo} />
+                            )
+                          }
                           title={
                             <>
                               <span className="card-title">

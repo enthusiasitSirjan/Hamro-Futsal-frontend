@@ -813,3 +813,24 @@
     border-radius:10px;
   }
 }
+
+// Admin dashboard users
+.admin-dashboard-users{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:15px;
+}
+
+.booking-status-admin{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap:15px;
+}
+
+// 
+.ant-progress-circle .ant-progress-text{
+  padding:20px
+}

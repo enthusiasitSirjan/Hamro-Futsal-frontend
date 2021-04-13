@@ -151,7 +151,13 @@ const Futsalarena = () => {
                       hoverable
                       style={{ width: 450 }}
                       key={`futsal-${index}`}
-                      cover={<img alt="example" src={data && data.fut_image} />}
+                      cover={
+                        <img
+                          alt="example"
+                          style={{ height: "350px", width: "450px" }}
+                          src={data && data.fut_image}
+                        />
+                      }
                       actions={[
                         <Button
                           shape="round"

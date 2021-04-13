@@ -1,10 +1,11 @@
-import { Card, Col, message, Modal, Row } from "antd";
+import { Card, Col, message, Modal, Row, Avatar } from "antd";
 import moment from "moment";
 import React, { useEffect, useState } from "react";
 import { GetApi } from "../../Api/Callapi";
 import { AllFutsalOwnerAccounts } from "../../Api/Endpoint";
 import AdminSidebar from "../Sidebar/AdminSidebar";
 import DeleteOwner from "./DeleteOwner";
+import { UserOutlined } from "@ant-design/icons";
 
 const { Meta } = Card;
 
@@ -38,7 +39,7 @@ const AdminFutsalOwners = () => {
           <Col>
             <AdminSidebar />
           </Col>
-          <Col>
+          <Col style={{ width: "80%" }}>
             <div
               className="admin-registered-owners"
               style={{
@@ -62,7 +63,13 @@ const AdminFutsalOwners = () => {
                     >
                       <div className="title-description">
                         <Meta
-                          // avatar={ <Avatar src="random.png" />}
+                          avatar={
+                            data && data.fut_image ? (
+                              <UserOutlined />
+                            ) : (
+                              <Avatar src={data && data.photo} />
+                            )
+                          }
                           title={
                             <>
                               <span className="card-title">

@@ -87,7 +87,7 @@ const AddTrainingForm = () => {
           <Col>
             <AdminSidebar />
           </Col>
-          <Col>
+          <Col style={{ width: "50%" }}>
             <div className="admin-training-form">
               <Card hoverable style={{ margin: "50px auto" }} width={400}>
                 <div>

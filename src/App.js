@@ -23,6 +23,7 @@ import AddTrainingForm from "./Admin/Trainings/AddTrainingForm";
 import UserSettings from "./User/UserSettings/UserSettings";
 import OwnerSettings from "./Futsalowner/OwnerSettings/OwnerSettings";
 import AddTournamentForm from "./Admin/Tournaments/AddTournamentForm";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 const App = () => {
   return (
@@ -42,42 +43,58 @@ const App = () => {
           <Route exact path="/verify_pin" component={CheckPin} />
           {/* New Password */}
           {/* Futsal Arenas */}
-          <Route exact path="/arenas" component={Arena} />
+          <PrivateRoute exact path="/arenas" component={Arena} />
           {/* Settings */}
-          <Route exact path="/settings" component={UserSettings} />
+          <PrivateRoute exact path="/settings" component={UserSettings} />
           {/* Change Password */}
           {/* Forgot Password */}
           <Route exact path="/forgot_password" component={PasswordVerify} />
           {/* Admin */}
-          <Route exact path="/admin/futsal" component={AllFutsal} />
-          <Route exact path="/admin/dashboard" component={AdminDashboard} />
-          <Route exact path="/admin/users" component={AdminUsers} />
-          <Route exact path="/admin/owners" component={AdminFutsalOwners} />
+          <PrivateRoute exact path="/admin/futsal" component={AllFutsal} />
+          <PrivateRoute
+            exact
+            path="/admin/dashboard"
+            component={AdminDashboard}
+          />
+          <PrivateRoute exact path="/admin/users" component={AdminUsers} />
+          <PrivateRoute
+            exact
+            path="/admin/owners"
+            component={AdminFutsalOwners}
+          />
           {/* Futsal Owner */}
-          <Route exact path="/owner/settings" component={OwnerSettings} />
-          <Route
+          <PrivateRoute
+            exact
+            path="/owner/settings"
+            component={OwnerSettings}
+          />
+          <PrivateRoute
             exact
             path="/owner/dashboard"
             component={FutsalOwnerDashBoard}
           />
-          <Route exact path="/owner/members" component={Membership} />
-          <Route exact path="/owner/bookings" component={Bookings} />
-          <Route
+          <PrivateRoute exact path="/owner/members" component={Membership} />
+          <PrivateRoute exact path="/owner/bookings" component={Bookings} />
+          <PrivateRoute
             exact
             path="/futsal/register"
             component={FutsalRegistrationForm}
           />
           {/* Trainings */}
-          <Route exact path="/training" component={Trainings} />
-          <Route exact path="/add_trainings" component={AddTrainingForm} />
+          <PrivateRoute exact path="/training" component={Trainings} />
+          <PrivateRoute
+            exact
+            path="/add_trainings"
+            component={AddTrainingForm}
+          />
           {/* Tournament */}
-          <Route
+          <PrivateRoute
             exact
             path="/add_tournaments"
             component={AddTournamentForm}
           />{" "}
           {/* News */}
-          <Route exact path="/news" component={News} />
+          <PrivateRoute exact path="/news" component={News} />
           {/* Logout */}
           <Route exact path="/logout" component={Logout} />
           {/* PagenotFOUND */}

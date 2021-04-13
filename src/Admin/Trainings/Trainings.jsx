@@ -63,16 +63,32 @@ const Trainings = () => {
                         <h4>Price :{data && data.t_price}</h4>
                       </div>
                       <div className="vl"></div>
-                      <div className="training-card-Name">
-                        <h4>Age : {data && data.t_age}</h4>
-                        <h4>Sessions : {data && data.t_sessions}</h4>
+                      <div
+                        className="training-card-Name"
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: "20px",
+                        }}
+                      >
+                        <h4 style={{ fontSize: "16px" }}>
+                          Age : {data && data.t_age}
+                        </h4>
+                        <h4 style={{ fontSize: "16px" }}>
+                          Sessions : {data && data.t_sessions}
+                        </h4>
                         <div style={{ display: "flex", gap: "15px" }}>
                           <PhoneOutlined />
-                          <h4>{data && data.t_contact_phone}</h4>
+                          <h4 style={{ fontSize: "16px" }}>
+                            {data && data.t_contact_phone}
+                          </h4>
                         </div>
                         <div style={{ display: "flex", gap: "15px" }}>
                           <MailOutlined />
-                          <h4>{data && data.t_email}</h4>
+                          <h4 style={{ fontSize: "16px" }}>
+                            {" "}
+                            {data && data.t_email}
+                          </h4>
                         </div>
                       </div>
                     </div>

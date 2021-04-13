@@ -169,7 +169,7 @@ const AccountSettings = () => {
                 <img
                   src={register}
                   alt="futsal-register"
-                  style={{ width: "68%" }}
+                  style={{ width: "20%" }}
                 />
               </div>
             </div>

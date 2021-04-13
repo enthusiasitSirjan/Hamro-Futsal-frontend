@@ -190,7 +190,7 @@ const BookNow = (futsalId) => {
             rules={[
               {
                 required: true,
-                message: "Please Select typ",
+                message: "Please Select type",
               },
             ]}
           >

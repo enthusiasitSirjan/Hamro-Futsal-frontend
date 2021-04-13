@@ -88,7 +88,7 @@ const ViewDetails = (futsalId) => {
               <Iframe
                 className="contact-us-map"
                 src={futsalData && futsalData.fut_map}
-                width="100"
+                width="300"
                 height="150"
                 style={{ border: "0", padding: "15px", margin: "10px" }}
                 allowfullscreen=""

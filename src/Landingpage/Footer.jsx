@@ -15,7 +15,9 @@ const Footer = () => {
         <Card hoverable bordered={true}>
           <div className="footer-main">
             <div>
-              <h1>Hamro Futsal Intro</h1>
+              <h3>
+                <strong>Hamro Futsal</strong>{" "}
+              </h3>
               <blockquote>
                 Hamro futsal is a evolution in the field of Nepali futsal
               </blockquote>
@@ -26,34 +28,6 @@ const Footer = () => {
                 alt="hamro-futsal"
                 style={{ height: "80px", width: "200px" }}
               />
-            </div>
-            <div>
-              <h1>Quick Info</h1>
-              <Card hoverable>
-                <Progress
-                  type="circle"
-                  percent={30}
-                  format={() => "30+ arenas"}
-                  strokeColor={"black"}
-                />
-
-                <Progress
-                  style={{ marginLeft: "10px" }}
-                  type="circle"
-                  percent={200}
-                  status="normal"
-                  format={() => "1000+ users"}
-                  strokeColor={"orange"}
-                />
-
-                <Progress
-                  style={{ marginLeft: "10px" }}
-                  type="circle"
-                  percent={80}
-                  format={() => "10+ Districts"}
-                  strokeColor={"red"}
-                />
-              </Card>
             </div>
           </div>
           <div className="footer-body">

@@ -56,7 +56,11 @@ const News = () => {
                     key={`tournament-${index}`}
                   >
                     <Meta
-                      title={<h1>{data && data.tourno_name}</h1>}
+                      title={
+                        <h1 style={{ fontSize: "12px" }}>
+                          {data && data.tourno_name}
+                        </h1>
+                      }
                       description={
                         <>
                           <div style={{ display: "flex", gap: "15px" }}>
