@@ -86,7 +86,6 @@ const BookNow = (futsalId) => {
       message.error("Failed to book");
     }
   };
-  const [timevalue, onTimeChange] = useState("10:00");
   const [startDate, setStartDate] = useState(new Date());
 
   const showModal = () => {
