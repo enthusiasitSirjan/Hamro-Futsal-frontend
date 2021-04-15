@@ -1,4 +1,11 @@
 export var url = "http://127.0.0.1:8000/";
+if (window.location.hostname === "localhost") {
+  url = "http://127.0.0.1:8000/".replace(/^http:\/\//i, "https://");
+  // const url = url.replace(/^http:\/\//i,'https://)'
+} else {
+  url = "https://backend-futsal.herokuapp.com/";
+  //  url = url.replace(/^http:\/\//i,'https://)'
+}
 
 //USER-LOGIN API::
 export const UserLoginLink = `${url}account/login/`;
