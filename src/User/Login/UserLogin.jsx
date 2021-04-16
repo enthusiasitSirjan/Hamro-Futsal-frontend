@@ -37,6 +37,8 @@ const UserLogin = () => {
         localStorage.setItem("token", userType.token);
         localStorage.setItem("user_role", userType.user_role);
         localStorage.setItem("user_id", userType.pk);
+        localStorage.setItem("address", userType.address);
+
         localStorage.setItem("user_name", userType.username);
 
         if (userType.user_role === "OWNER") {
