@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
 import { UserOutlined } from "@ant-design/icons";
-import { useHistory } from "react-router-dom";
-import { Row, Col } from "react-bootstrap";
 import { Avatar, Button, Card, Form, Input, message } from "antd";
+import React, { useEffect, useState } from "react";
+import { Col, Row } from "react-bootstrap";
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
+import { useHistory } from "react-router-dom";
 import { GetApi, PatchApi } from "../../Api/Callapi";
 import { UserProfileLink } from "../../Api/Endpoint";
-import "react-phone-number-input/style.css";
-import PhoneInput from "react-phone-number-input";
 
 const ProfileSettings = () => {
   const history = useHistory();

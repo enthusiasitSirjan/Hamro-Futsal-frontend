@@ -1,20 +1,17 @@
-import { LocationSearchingOutlined } from "@material-ui/icons";
-import {} from "antd";
-import React, { useState, useEffect } from "react";
-import { Card, Button, Modal, message, Input, Select, Slider } from "antd";
 import { ThunderboltOutlined } from "@ant-design/icons";
-import ViewDetails from "./ViewDetails";
-import BecomeMember from "./BecomeMember";
-import BookNow from "./BookNow";
-import { GetApi, AuthPostApi } from "../../Api/Callapi";
+import { LocationSearchingOutlined } from "@material-ui/icons";
+import { Button, Card, Input, message, Modal, Select } from "antd";
+import React, { useEffect, useState } from "react";
+import { GetApi } from "../../Api/Callapi";
 import {
   AllFutsalLink,
+  BothSideFutsalLink,
   FiveASideFutsalLink,
   SevenASideFutsalLink,
-  BothSideFutsalLink,
-  SearchFutsalNameLink,
-  SearchFutsalLocationLink,
 } from "../../Api/Endpoint";
+import BecomeMember from "./BecomeMember";
+import BookNow from "./BookNow";
+import ViewDetails from "./ViewDetails";
 const { Meta } = Card;
 
 const { Search } = Input;

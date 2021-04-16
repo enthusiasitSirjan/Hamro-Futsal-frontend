@@ -1,4 +1,4 @@
-export var url = "http://127.0.0.1:8000/";
+var url = "http://127.0.0.1:8000/";
 if (window.location.hostname === "localhost") {
   url = "http://127.0.0.1:8000/";
 } else {

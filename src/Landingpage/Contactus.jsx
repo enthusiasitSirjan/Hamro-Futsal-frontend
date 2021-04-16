@@ -1,7 +1,3 @@
-import { Col, Row, Form, Input, Button, Card } from "antd";
-import React from "react";
-import Iframe from "react-iframe";
-import contactus from "../assets/contactus.png";
 import {
   FacebookFilled,
   InstagramFilled,
@@ -9,6 +5,9 @@ import {
   MailFilled,
   TwitterCircleFilled,
 } from "@ant-design/icons";
+import { Card, Col, Row } from "antd";
+import React from "react";
+import Iframe from "react-iframe";
 
 const Contactus = () => {
   const layout = {

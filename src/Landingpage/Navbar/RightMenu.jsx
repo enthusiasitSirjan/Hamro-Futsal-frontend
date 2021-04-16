@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { Menu, Grid, Avatar, message } from "antd";
-import { Link } from "react-router-dom";
 import { UserAddOutlined } from "@ant-design/icons";
-import { GetApi } from "../../Api/Callapi";
-import { UserProfileLink } from "../../Api/Endpoint";
+import { Avatar, Grid, Menu } from "antd";
+import React from "react";
+import { Link } from "react-router-dom";
 
 const { useBreakpoint } = Grid;
 
