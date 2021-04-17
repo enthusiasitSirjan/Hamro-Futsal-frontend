@@ -1,9 +1,9 @@
 var url = "http://127.0.0.1:8000/";
-if (window.location.hostname === "localhost") {
-  url = "http://127.0.0.1:8000/";
-} else {
-  url = "https://backend-futsal.herokuapp.com/";
-}
+// if (window.location.hostname === "localhost") {
+//   url = "http://127.0.0.1:8000/";
+// } else {
+//   url = "https://backend-futsal.herokuapp.com/";
+// }
 
 //USER-LOGIN API::
 export const UserLoginLink = `${url}account/login/`;
@@ -32,6 +32,8 @@ export const FutsalDetailsLink = `${url}futsal/`;
 export const MyBookingsLink = `${url}futsal/my_booking/`;
 export const FutsalRateLink = `${url}futsal/futsal_rate/`;
 export const MyFutsalLink = `${url}futsal/my_futsal/`;
+export const CreateFutsalRatingLink = `${url}futsal/rate/`;
+export const AllFutsalRatingLink = `${url}futsal/total_rating/`;
 
 // Trainings
 export const AddTrainingsLink = `${url}futsal/add_training/`;

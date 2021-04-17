@@ -1,13 +1,14 @@
 import { ThunderboltOutlined } from "@ant-design/icons";
 import { LocationSearchingOutlined } from "@material-ui/icons";
-import { Button, Card, Input, message, Modal, Select } from "antd";
+import { Button, Card, Input, message, Modal, Rate, Select } from "antd";
 import React, { useEffect, useState } from "react";
-import { GetApi } from "../../Api/Callapi";
+import { GetApi, PostApi } from "../../Api/Callapi";
 import {
   AllFutsalLink,
   BothSideFutsalLink,
   FiveASideFutsalLink,
   SevenASideFutsalLink,
+  AllFutsalRatingLink,
 } from "../../Api/Endpoint";
 import BecomeMember from "./BecomeMember";
 import BookNow from "./BookNow";
@@ -84,6 +85,7 @@ const Futsalarena = () => {
       message.error("Sorry couldn't load futsal details right now");
     }
   };
+
   return (
     <>
       <div className="futsal-arena-container">

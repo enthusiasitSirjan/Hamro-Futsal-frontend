@@ -11,6 +11,7 @@ import {
   BookFutsalLink,
   FutsalRateLink,
   UserProfileLink,
+  FutsalDetailsLink,
 } from "../../Api/Endpoint";
 
 const { Option } = Select;
@@ -50,10 +51,12 @@ const BookNow = (futsalId) => {
   const UserID = localStorage.getItem("user_id" || "");
   const [profileInfo, setProfileInfo] = useState({});
   const [visible, setVisible] = useState(false);
+  const [futsalType, setfutsalType] = useState();
 
   console.log("futsal id ", futsalId);
   useEffect(() => {
     init();
+    futsalInit();
   }, []);
 
   const profile_url = UserProfileLink + UserID;
@@ -65,6 +68,18 @@ const BookNow = (futsalId) => {
       setProfileInfo(res.data);
     } else {
       message.error("Sorry couldn't load profile info right now");
+    }
+  };
+  const futsal_url = FutsalDetailsLink + futsalId.futsalID;
+
+  const futsalInit = async (e) => {
+    const res = await GetApi(futsal_url);
+
+    if (res.status === 200) {
+      const data = res.data;
+      setfutsalType(data.fut_type);
+    } else {
+      message.error("Sorry couldn't load futsal info right now");
     }
   };
 
@@ -99,6 +114,7 @@ const BookNow = (futsalId) => {
   const handleCancel = () => {
     console.log("Clicked cancel button");
     setVisible(false);
+    window.location.reload(true);
   };
   const [futsalRate, setfutsalRate] = useState({});
 
