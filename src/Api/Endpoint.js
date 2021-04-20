@@ -1,9 +1,9 @@
 var url = "http://127.0.0.1:8000/";
-// if (window.location.hostname === "localhost") {
-//   url = "http://127.0.0.1:8000/";
-// } else {
-//   url = "https://backend-futsal.herokuapp.com/";
-// }
+if (window.location.hostname === "localhost") {
+  url = "http://127.0.0.1:8000/";
+} else {
+  url = "https://backend-futsal.herokuapp.com/";
+}
 
 //USER-LOGIN API::
 export const UserLoginLink = `${url}account/login/`;
