@@ -94,17 +94,18 @@ const Futsalarena = () => {
             <div className="futsal-search-body">
               <div className="futsal-search-alignment">
                 <Search
+                  id="searchFutsal"
                   placeholder="Type to Search Futsal"
                   name="searched_futsal"
                   onSearch={onSearchName}
-                  style={{ width: 300 }}
+                  style={{ width: "100%" }}
                 />
 
                 <Search
                   placeholder="Type to Search location"
                   onSearch={onSearchLocation}
                   suffix={suffix}
-                  style={{ width: 300 }}
+                  style={{ width: "100%" }}
                 />
               </div>
 
@@ -114,7 +115,7 @@ const Futsalarena = () => {
               >
                 <Select
                   showSearch
-                  style={{ width: 300 }}
+                  style={{ width: "100%" }}
                   placeholder="Select Type"
                   optionFilterProp="children"
                   onChange={onChange}
@@ -134,7 +135,7 @@ const Futsalarena = () => {
                 <Search
                   placeholder="Type to Search Price"
                   onSearch={onSearchPrice}
-                  style={{ width: 300 }}
+                  style={{ width: "100%" }}
                 />
               </div>
             </div>
@@ -147,53 +148,57 @@ const Futsalarena = () => {
               {futsalInfo
                 ? futsalInfo.map((data, index) => (
                     <Card
+                      width={250}
                       hoverable
-                      style={{ width: 450 }}
                       key={`futsal-${index}`}
                       cover={
                         <img
                           alt="example"
-                          style={{ height: "350px", width: "450px" }}
+                          style={{ height: "350px", width: "100%" }}
                           src={data && data.fut_image}
                         />
                       }
                       actions={[
-                        <Button
-                          shape="round"
-                          size="small"
-                          type="primary"
-                          className="btn-color"
-                          onClick={() => {
-                            setModal1Visible(!modal1Visible);
-                            setFutsalId(data && data.id);
-                          }}
-                        >
-                          View Details
-                        </Button>,
-                        <Button
-                          shape="round"
-                          size="small"
-                          type="primary"
-                          className="btn-color"
-                          onClick={() => {
-                            setModal3Visible(!modal3Visible);
-                            setFutsalId(data && data.id);
-                          }}
-                        >
-                          Book Now
-                        </Button>,
-                        <Button
-                          shape="round"
-                          size="small"
-                          type="primary"
-                          className="btn-color"
-                          onClick={() => {
-                            setModal2Visible(!modal2Visible);
-                            setFutsalId(data && data.id);
-                          }}
-                        >
-                          Become Member
-                        </Button>,
+                        <div clasName="futsal-btn">
+                          <Button
+                            shape="round"
+                            size="small"
+                            type="primary"
+                            className="btn-color"
+                            onClick={() => {
+                              setModal1Visible(!modal1Visible);
+                              setFutsalId(data && data.id);
+                            }}
+                          >
+                            View Details
+                          </Button>
+
+                          <Button
+                            shape="round"
+                            size="small"
+                            type="primary"
+                            className="btn-color"
+                            onClick={() => {
+                              setModal3Visible(!modal3Visible);
+                              setFutsalId(data && data.id);
+                            }}
+                          >
+                            Book Now
+                          </Button>
+
+                          <Button
+                            shape="round"
+                            size="small"
+                            type="primary"
+                            className="btn-color"
+                            onClick={() => {
+                              setModal2Visible(!modal2Visible);
+                              setFutsalId(data && data.id);
+                            }}
+                          >
+                            Become Member
+                          </Button>
+                        </div>,
                       ]}
                     >
                       <Meta

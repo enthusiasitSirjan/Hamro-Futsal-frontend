@@ -27,7 +27,10 @@ const UserStat = () => {
   return (
     <>
       <h1 style={{ textAlign: "center" }}>Quick Info</h1>
-      <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+      <div
+        className="user-stats"
+        style={{ display: "flex", justifyContent: "space-evenly" }}
+      >
         <Card>
           <Progress
             type="circle"

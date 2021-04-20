@@ -63,16 +63,22 @@ const ViewDetails = (futsalId) => {
     console.log("Success:", values);
     const user_rating_url = CreateFutsalRatingLink;
     values["futsal"] = futsalId.futsalID;
-    const response = await AuthPostApi(user_rating_url, values);
-    console.log(response);
-    if (response.status === 201) {
-      let responseData = response.data;
-      if (responseData) {
-        setuserRating(responseData.stars);
+    if (values.stars !== undefined) {
+      const response = await AuthPostApi(user_rating_url, values);
+      console.log(response);
+      if (response.status === 201) {
+        let responseData = response.data;
+        if (responseData) {
+          setuserRating(responseData.stars);
+        }
+        message.success("Thank you for your review");
+      } else if (response.status === 500) {
+        message.info("You have already reviewed this futsal");
+      } else {
+        message.error("Failed to review");
       }
-      message.info("Thank you for your review");
     } else {
-      message.error("Failed to review");
+      message.info("Select stars to rate");
     }
   };
   return (
@@ -124,11 +130,11 @@ const ViewDetails = (futsalId) => {
               </div>
             </Card>
 
-            <div className="futsal-location">
+            <div className="futsal-location" style={{ margin: "10px auto" }}>
               <Iframe
                 className="contact-us-map"
                 src={futsalData && futsalData.fut_map}
-                width="300"
+                width="95%"
                 height="150"
                 style={{ border: "0", padding: "15px", margin: "10px" }}
                 allowfullscreen=""
@@ -153,7 +159,7 @@ const ViewDetails = (futsalId) => {
               <h4>User Rating</h4>
               {rating ? (
                 <div>
-                  <Rate allowHalf value={rating} />
+                  <Rate allowHalf allowClear value={rating} />
                 </div>
               ) : (
                 "No reviews"
@@ -173,7 +179,7 @@ const ViewDetails = (futsalId) => {
               </div>
               <p>Note : You cannot review futsal more than once</p>
               <div>
-                <Card title="Payment Method">
+                <Card title="Pay through Khalti ">
                   <img src={payment} alt="payment-method"></img>
                 </Card>
               </div>

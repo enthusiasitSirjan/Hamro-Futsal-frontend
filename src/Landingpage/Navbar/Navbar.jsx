@@ -36,7 +36,7 @@ const Navbar = () => {
           <RightMenu />
         </div>
         <Button className="barsMenu" type="primary" onClick={showDrawer}>
-          <span className="barsBtn"></span>
+          <span className="barsBtn" id="mobile-menu-bars"></span>
         </Button>
         <Drawer
           title="Hamro Futsal"

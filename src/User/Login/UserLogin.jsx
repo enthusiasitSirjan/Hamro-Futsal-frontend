@@ -125,6 +125,7 @@ const UserLogin = () => {
                       type="primary"
                       htmlType="submit"
                       className="login-form-button"
+                      id="login-btn"
                     >
                       Log in
                     </Button>

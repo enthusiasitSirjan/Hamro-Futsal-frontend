@@ -16,9 +16,9 @@ const Imagesection = () => {
           <div className="image-section">
             <img src={futsalimg} alt="img"></img>
             <div className="search-futsal-arenas">
-              <h1 style={{ fontSize: "70px" }}>We are Hamro Futsal </h1>
+              <h1>We are Hamro Futsal </h1>
               <ReactTypingEffect
-                speed={300}
+                speed={100}
                 text={[
                   "We provide you News !!",
                   "We provide you Futsal arenas to book !!!",

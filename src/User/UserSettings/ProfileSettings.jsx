@@ -154,6 +154,7 @@ const ProfileSettings = () => {
                             <Form.Item
                               name="name"
                               label="Name"
+                              id="name"
                               rules={[
                                 {
                                   required: true,
@@ -201,6 +202,7 @@ const ProfileSettings = () => {
 
                             <div style={{ display: "flex", gap: "20px" }}>
                               <Button
+                                id="saveChanges"
                                 type="primary"
                                 htmlType="submit"
                                 disabled={disabled}
@@ -277,6 +279,7 @@ const ProfileSettings = () => {
                 <></>
               ) : (
                 <Button
+                  id="editProfile"
                   className="program-continue"
                   onClick={handleEdit}
                   style={{ float: "left" }}

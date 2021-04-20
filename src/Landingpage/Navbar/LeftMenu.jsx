@@ -9,7 +9,9 @@ const LeftMenu = () => {
   return (
     <Menu mode={md ? "horizontal" : "inline"}>
       <Menu.Item>
-        <Link to="/arenas">Futsal Arenas</Link>
+        <Link to="/arenas" id="futsalarenas">
+          Futsal Arenas
+        </Link>
       </Menu.Item>
 
       <Menu.Item key="mail">
@@ -17,7 +19,9 @@ const LeftMenu = () => {
       </Menu.Item>
 
       <Menu.Item>
-        <Link to="/training">Trainings</Link>
+        <Link to="/training" id="trainings">
+          Trainings
+        </Link>
       </Menu.Item>
     </Menu>
   );

@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="futsal-footer">
         <Card hoverable bordered={true}>
           <div className="footer-main">
-            <div>
+            <div className="footer-first">
               <h3>
                 <strong>Hamro Futsal</strong>{" "}
               </h3>
@@ -31,7 +31,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="footer-body">
-            <div>
+            <div className="footer-social-text">
               <h3>Stay Connected</h3>
               <div className="social-media-icons">
                 <Tag icon={<TwitterCircleFilled />} color="#55acee">
@@ -50,7 +50,7 @@ const Footer = () => {
             </div>
             <div className="footer-tags">
               <h3>Tag us in social media</h3>
-              <div>
+              <div class="futsal-tags">
                 <Tag color="red">#futsal</Tag>
 
                 <Tag color="orange">#nepal</Tag>

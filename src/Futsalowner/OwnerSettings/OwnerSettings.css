@@ -195,9 +195,7 @@ textarea {
 
 @media screen and (max-width: 768px) {
   .four-buttons {
-    display: grid;
-    grid-template-columns: auto auto;
-    max-width: 1920px;
+    width: "95%";
   }
 }
 

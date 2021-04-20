@@ -23,7 +23,9 @@ const Landingpage = () => {
           <Aboutus />
           <Gallery />
           <UserStat />
-          <Contactus />
+          <div className="futsal-contact-landingpage">
+            <Contactus />
+          </div>
         </div>
       </main>
 

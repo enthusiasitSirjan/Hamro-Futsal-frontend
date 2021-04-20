@@ -438,13 +438,7 @@
     margin-top: 24px;
   }
 
-  @media (max-width:1130px)
-  {
-    .futsal-logo-footer{
-      display: none;
-    }
-  }
-
+  
   @media (max-width:880px){
     .footer-main ,.footer-body{
       display: flex;
@@ -634,12 +628,14 @@
   width: 50%;
   margin:50px auto ;
 }
+
 .futsal-search-box-items{
   display: grid;
-  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-template-columns:33.33% 33.33% 33.33%;
   margin: 20px auto;
-  gap: 50px;
+  gap: 30px;
 }
+
 .btn-color{
     background: rgb(17, 164, 35);
     border-color: #d6d3c2;
@@ -650,6 +646,9 @@
   align-items: center;
 }
 
+.futsal-card{
+  width: 100%;
+}
 
 
 // Admin-Dashboard
@@ -833,4 +832,192 @@
 // 
 .ant-progress-circle .ant-progress-text{
   padding:20px
+}
+
+.search-futsal-arenas{
+  h1{
+    font-size: 50px;
+  }
+}
+.futsal-gallery{
+  margin-bottom: 20px;
+}
+
+
+.upcoming-tournaments{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.user-booking-table{
+  display: flex;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+}
+
+.ant-table.ant-table-middle {
+  font-size: 14px;
+}
+
+// user stat
+@media screen and (max-width:768px){
+  .user-stats{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px auto;
+    gap:20px;
+  }
+  h1{
+    font-size: 16px;
+  }
+  
+  .futsal-google-map{
+    display: flex;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-social-text {
+    h3{
+      font-size: 18px;
+    }
+
+    .social-media-icons{
+      display: flex;
+      flex-direction: column;
+      gap:5px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    
+  }
+  .footer-tags {
+    h3{
+      font-size: 18px;
+    }
+
+    .futsal-tags{
+      display: flex;
+      flex-direction: column;
+      gap:5px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    
+  }
+  .search-futsal-arenas{
+    h1{
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+  
+  .type-and-title, .address-and-price {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+  .futsal-btn{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.futsal-contact-landingpage{
+position: relative;
+margin:20px auto;
+}
+
+.futsal-contact-us{
+  position: relative;
+}
+
+@media (max-width:512px){
+  .futsal-search-main {
+    width: 95%;
+    margin: 10px;
+  }
+  .futsal-search-alignment {
+    flex-direction: column;
+  }
+}
+
+@media (max-width:1440px)
+{
+  .futsal-search-box-items{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+}
+
+@media (max-width:820px)
+{
+  .futsal-search-box-items{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+  }
+
+}
+
+@media (max-width:1190px) {
+  .futsal-training-container .futsal-training-main .training-card-main {
+    flex-direction: column;
+}
+.futsal-training-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  gap:20px;
+}
+.futsal-training .futsal-training-header-contents {
+  width: 100%;
+  margin-bottom: 20px;
+}
+}
+
+@media (max-width:1000px){
+  .futsal-news-main .futsal-news-imagelist {
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+}
+  .upcoming-tournaments{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+  }
+}
+@media (max-width:770px)
+{
+  .upcoming-tournaments{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    gap: 20px;
+  }
+  .futsal-news-list .futsal-news-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+  .ant-table.ant-table-middle {
+    font-size: 8px;
+  }
+
+  .user-booking-table{
+    margin: 10px 40px;
+  }
 }

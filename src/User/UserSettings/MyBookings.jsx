@@ -70,7 +70,7 @@ const MyBookings = () => {
   return (
     <>
       <Row>
-        <Col lg={14} style={{ width: "42%" }}>
+        <div className="user-booking-table">
           <Table
             columns={columns}
             dataSource={loadData}
@@ -78,7 +78,7 @@ const MyBookings = () => {
             tableLayout="fixed"
             size="middle"
           />
-        </Col>
+        </div>
       </Row>
     </>
   );

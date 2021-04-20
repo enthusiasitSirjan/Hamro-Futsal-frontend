@@ -10,7 +10,7 @@ const RightMenu = () => {
   return (
     <Menu mode={sm ? "horizontal" : "inline"}>
       <Menu.Item>
-        <Link to="/settings" style={{ padding: "0" }}>
+        <Link to="/settings" id="userSettings" style={{ padding: "0" }}>
           {localStorage.length === 0 ? null : (
             <div
               style={{
@@ -37,15 +37,21 @@ const RightMenu = () => {
       {localStorage.length === 0 ? (
         <>
           <Menu.Item key="mail">
-            <Link to="/register">Register</Link>
+            <Link to="/register" id="register">
+              Register
+            </Link>
           </Menu.Item>
           <Menu.Item key="app">
-            <Link to="/login">Sign in</Link>
+            <Link to="/login" id="signin">
+              Sign in
+            </Link>
           </Menu.Item>
         </>
       ) : (
         <Menu.Item key="app">
-          <Link to="/logout">Logout</Link>
+          <Link to="/logout" id="logout">
+            Logout
+          </Link>
         </Menu.Item>
       )}
     </Menu>

@@ -58,6 +58,7 @@ const Contactus = () => {
               </div>
             </Col>
             <Col
+              className="futsal-google-map"
               xs={{ span: 24 }}
               md={{ span: 12 }}
               lg={{ span: 12 }}

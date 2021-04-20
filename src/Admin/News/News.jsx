@@ -45,10 +45,10 @@ const News = () => {
         {/* One image + list View */}
         <div className="futsal-news-imagelist">
           <div className="upcoming-tournaments">
-            <h1>Upcoming Tournaments</h1>
             {tournamentData
               ? tournamentData.map((data, index) => (
                   <Card
+                    title="Upcoming Tournaments"
                     style={{ width: 300 }}
                     cover={
                       <img alt="Tournaments" src={data && data.tourno_photo} />

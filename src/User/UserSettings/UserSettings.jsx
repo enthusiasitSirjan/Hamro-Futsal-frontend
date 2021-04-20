@@ -38,6 +38,7 @@ const UserSettings = () => {
                 Account Settings
               </button>
               <button
+                id="profileSettings"
                 className={active === "profile" ? "active" : null}
                 onClick={() => setActive("profile")}
               >
