@@ -22,7 +22,6 @@ const Landingpage = () => {
           <Futsalnepal />
           <Aboutus />
           <Gallery />
-          <UserStat />
           <div className="futsal-contact-landingpage">
             <Contactus />
           </div>
@@ -31,6 +30,7 @@ const Landingpage = () => {
 
       <footer>
         <Footer />
+        
       </footer>
     </>
   );

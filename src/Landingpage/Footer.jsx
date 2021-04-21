@@ -7,6 +7,7 @@ import {
   InstagramFilled,
 } from "@ant-design/icons";
 import logo from "../assets/logo.PNG";
+import UserStat from "./UserStat";
 
 const Footer = () => {
   return (
@@ -23,11 +24,7 @@ const Footer = () => {
               </blockquote>
             </div>
             <div className="futsal-logo-footer">
-              <img
-                src={logo}
-                alt="hamro-futsal"
-                style={{ height: "80px", width: "200px" }}
-              />
+              <UserStat />
             </div>
           </div>
           <div className="footer-body">

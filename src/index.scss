@@ -72,7 +72,6 @@
   display: block;
   width: 20px;
   height: 2px;
-  background: #1890ff;
   position: relative;
 }
 
@@ -114,17 +113,21 @@
   border-bottom-color: transparent;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1000px) {
   .barsMenu {
-    display: inline-block;
+    display: block;
   }
-
+  .ant-btn-primary{
+    color: #ad77c0 !important;
+  }
   .leftMenu,
   .rightMenu {
     display: none;
   }
 
-
+  .barsMenu:hover {
+    color: #ad77c0;
+  }
   .menuCon .ant-menu-item,
   .menuCon .ant-menu-submenu-title {
     padding: 1px 20px;
