@@ -1,6 +1,6 @@
 /* eslint-disable no-restricted-globals */
-var CACHE_NAME = "pwa-task-manager";
-var urlsToCache = ["/", "/completed"];
+let CACHE_NAME = "Hamro-futsal";
+let urlsToCache = ["/", "/completed"];
 
 // Install a service worker
 self.addEventListener("install", (event) => {
@@ -27,9 +27,8 @@ self.addEventListener("fetch", (event) => {
 });
 
 // Update a service worker
-// eslint-disable-next-line no-restricted-globals
 self.addEventListener("activate", (event) => {
-  var cacheWhitelist = ["pwa-task-manager"];
+  let cacheWhitelist = ["Hamro-futsal"];
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
