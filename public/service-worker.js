@@ -1,40 +1,36 @@
-/* eslint-disable no-restricted-globals */
-// Installing service worker
-const CACHE_NAME = "Hamro Futsal";
-
-/* Add relative URL of all the static content you want to store in
- * cache storage (this will help us use our app offline)*/
-let resourcesToCache = ["./", "./img/game.png", "./game.js", "./styles.css"];
-
-self.addEventListener("install", (e) => {
-  e.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(resourcesToCache);
-    })
-  );
-});
-
-// Cache and return requests
-self.addEventListener("fetch", (e) => {
-  e.respondWith(
-    caches.match(e.request).then((response) => {
-      return response || fetch(e.request);
-    })
-  );
-});
-
-// Update a service worker
-const cacheWhitelist = ["Hamro-futsal"];
-self.addEventListener("activate", (event) => {
+const CACHE_NAME = "version-1";
+const urlsToCache = ["index.html", "offline.html"];
+const self = this;
+// Install SW
+self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
+    caches.open(CACHE_NAME).then((cache) => {
+      console.log("Opened cache");
+      return cache.addAll(urlsToCache);
+    })
+  );
+});
+// Listen for requests
+self.addEventListener("fetch", (event) => {
+  event.respondWith(
+    caches.match(event.request).then(() => {
+      return fetch(event.request).catch(() => caches.match("offline.html"));
+    })
+  );
+});
+// Activate the SW
+self.addEventListener("activate", (event) => {
+  const cacheWhitelist = [];
+  cacheWhitelist.push(CACHE_NAME);
+  event.waitUntil(
+    caches.keys().then((cacheNames) =>
+      Promise.all(
         cacheNames.map((cacheName) => {
-          if (cacheWhitelist.indexOf(cacheName) === -1) {
+          if (!cacheWhitelist.includes(cacheName)) {
             return caches.delete(cacheName);
           }
         })
-      );
-    })
+      )
+    )
   );
 });
